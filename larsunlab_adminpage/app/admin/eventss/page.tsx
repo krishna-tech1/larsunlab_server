@@ -20,6 +20,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import toast from "react-hot-toast";
 
 export default function EventsPage() {
+  const formatDate = (dateStr: string) => {
+    if (!dateStr) return "";
+    const date = new Date(dateStr);
+    return date.toLocaleDateString("en-US", {
+      month: "short",
+      day: "2-digit",
+      year: "numeric",
+    });
+  };
   const [activeFilter, setActiveFilter] = useState("All");
   const [openModal, setOpenModal] = useState(false);
   const [deleteId, setDeleteId] = useState<string | null>(null);
@@ -401,7 +410,7 @@ export default function EventsPage() {
                   </p>
                   <p className="flex items-center gap-2">
                     <Calendar size={14} className="text-orange-500" />
-                    {e.endDate ? `${e.date} - ${e.endDate}` : e.date}
+                    {e.endDate ? `${formatDate(e.date)} - ${formatDate(e.endDate)}` : formatDate(e.date)}
                   </p>
                 </div>
 
