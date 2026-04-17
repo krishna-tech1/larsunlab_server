@@ -1,0 +1,78 @@
+# ==========================================
+# UNIVERSAL GITIGNORE FOR LARSUN LABS MONOREPO
+# Covers: Backend, User Frontend, Admin Frontend
+# ==========================================
+
+# --- Dependencies ---
+**/node_modules/
+**/bower_components/
+**/package-lock.json
+**/yarn.lock
+**/pnpm-lock.yaml
+
+# --- Next.js / React / Build Outputs ---
+**/.next/
+**/out/
+**/build/
+**/dist/
+**/.cache/
+**/.contentlayer/
+**/public/build/
+
+# --- Environment & Secrets (CRITICAL) ---
+**/.env
+**/.env.local
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
+**/.env*.local
+**/.env.production
+**/.env.development
+**/.env.staging
+**/secrets.json
+**/*.pem
+**/*.key
+
+# --- Logs & Debugging ---
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/.pnpm-debug.log*
+**/*.log
+**/logs/
+**/.error_log
+
+# --- System & OS Files ---
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+desktop.ini
+*.swp
+*.swo
+
+# --- IDE & Editors ---
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
+.settings/
+*.launch
+.history/
+
+# --- Local Scripts & Temp ---
+.zencoder/
+.zenflow/
+replace_url.js
+**/scratch/
+**/temp/
+**/tmp/
+**/coverage/
+**/.nyc_output/
+
+# --- Documentation Helpers ---
+AGENTS.md
+CLAUDE.md
